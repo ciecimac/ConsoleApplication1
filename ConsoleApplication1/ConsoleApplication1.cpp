@@ -11,12 +11,16 @@ private:
 	int month;
 	int day;
 	int check();
+	
 public:
 	CMyDate();
 	CMyDate(int y, int m, int d);
 	int setDate(int y, int m, int d);
 	void displayDate();
 	void addOneDay();
+	int getYear();
+	int getMonth();
+	int getDay();
 };
 CMyDate::CMyDate()
 {
@@ -74,6 +78,18 @@ int CMyDate::check()
 	}
 	return 0;
 }
+int CMyDate::getYear()
+{
+	return year;
+}
+int CMyDate::getMonth()
+{
+	return month;
+}
+int CMyDate::getDay()
+{
+	return day;
+}
 void CMyDate::addOneDay()
 {
 	int flatYearDays[12] = { 31,28,31,30,31,30,31,31,30,31,30,31 };
@@ -107,11 +123,15 @@ int main()
 {
 	CMyDate od;
 	int i;
-	od.setDate(2016, 4, 8);
+	int count=1;
+	od.setDate(2000, 1, 21);
 	od.displayDate();
-	for(i=0;i<100;i++)
+	while (!((od.getYear() == 2019) && (od.getMonth() == 4) &&( od.getDay()) == 11))
+	{
 		od.addOneDay();
-	od.displayDate();
+		count++;
+	}
+	cout << count << endl;
     return 0;
 }
 
