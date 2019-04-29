@@ -129,6 +129,7 @@ int main()
 	od.setDate(2000, 1, 21);
 	//重新设置日期
 	od.displayDate();
+	//显示日期
 	while (!((od.getYear() == 2019) && (od.getMonth() == 4) &&( od.getDay()) == 11))
 	{
 		od.addOneDay();
