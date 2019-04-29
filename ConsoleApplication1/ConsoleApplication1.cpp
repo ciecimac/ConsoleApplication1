@@ -127,6 +127,7 @@ int main()
     //循环变量
 	int count=1;
 	od.setDate(2000, 1, 21);
+	//重新设置日期
 	od.displayDate();
 	while (!((od.getYear() == 2019) && (od.getMonth() == 4) &&( od.getDay()) == 11))
 	{
