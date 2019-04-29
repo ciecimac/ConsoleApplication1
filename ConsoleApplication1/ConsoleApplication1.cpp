@@ -121,8 +121,10 @@ void CMyDate::addOneDay()
 }
 int main()
 {
-	CMyDate od;
+	CMyDate od;//用CMyDate日期类创建od对象
+        //od 对象的缺省值是2019年1月1日
 	int i;
+    //循环变量
 	int count=1;
 	od.setDate(2000, 1, 21);
 	od.displayDate();
