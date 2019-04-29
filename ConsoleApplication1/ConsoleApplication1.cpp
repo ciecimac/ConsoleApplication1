@@ -126,6 +126,7 @@ int main()
 	int i;
     //循环变量
 	int count=1;
+    //日期计数器置初始值1
 	od.setDate(2000, 1, 21);
 	//重新设置日期
 	od.displayDate();
